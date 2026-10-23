@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& arr) {
+        int condidate = 0;
+        int count = 0;
+        for(int num : arr)  {
+            if(count == 0) {
+                condidate = num;
+            }
+            if(condidate == num) {
+                count++;
+            }
+            else {
+                count--;
+            }
+        } 
+        return condidate;
+    }
+};
